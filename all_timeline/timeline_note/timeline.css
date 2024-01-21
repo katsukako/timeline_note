@@ -1,0 +1,72 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #444;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 45%;
+}
+
+.container.right {
+  left: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right::after {
+  left: -25px;
+}
+
+.container.left::after {
+  right: -25px;
+}
+
+.entry {
+  padding: 15px;
+  border-radius: 6px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Add arrows for the entry boxes */
+.entry::before {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  top: 18px;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+}
+
+.container.right .entry::before {
+  right: -15px;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.container.left .entry::before {
+  left: -15px;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+/* Alternate background colors for entries */
+.container:nth-child(odd) .entry {
+  background-color: #f9f9f9;
+}

@@ -1,54 +1,18 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>timeline</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet" />
-  </head>
-  <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        line-height: 1.6;
-        padding: 20px;
-    }
-
-    #json-container {
-        margin: auto;
-        max-width: 800px;
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-
-    .entry {
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
-    }
-
-    .entry:last-child {
-        border-bottom: none;
-    }
-
-    .entry h2 {
-        margin-top: 0;
-        color: #007bff;
-    }
-
-    .entry p {
-        margin: 5px 0;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline</title>
+<link rel="stylesheet" href="timeline.css">
 </head>
 <body>
-<h1>Timeline数据</h1>
-<div id="json-container"></div>
+
+<div id="json-container" class="timeline">
+  <!-- 时间线事件将通过JavaScript动态加载到这里 -->
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>

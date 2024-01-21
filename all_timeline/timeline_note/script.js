@@ -6,15 +6,14 @@ fetch('notes.json?' + new Date().getTime())
 
     var container = document.getElementById('json-container');
 
-    jsonData.forEach(function(item) {
+    jsonData.forEach(function(item, index) {
         var div = document.createElement('div');
-        div.className = 'entry';
-        
-        // 提取年份
+        div.className = 'container ' + (index % 2 === 0 ? 'left' : 'right');
+        var entry = document.createElement('div');
+        entry.className = 'entry';
         var year = new Date(item.date).getFullYear();
-
-        // 只显示年份和内容
-        div.innerHTML = '<h2>Year: ' + year + '</h2><p>' + item.content + '</p>';
+        entry.innerHTML = '<h2>Year: ' + year + '</h2><p>' + item.content + '</p>';
+        div.appendChild(entry);
         container.appendChild(div);
     });
 })
