@@ -2,121 +2,251 @@
     {
         "content": "test",
         "date": "2024-01-20",
-        "id": "a0000"
+        "id": "a0000",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "test",
         "date": "2024-01-20",
-        "id": "a0000"
+        "id": "a0000",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "test save function",
         "date": "2024-01-20",
-        "id": "a0001"
+        "id": "a0001",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "NEW try",
         "date": "2024-01-20",
-        "id": "a0002"
+        "id": "a0002",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "最早的computer称呼，来自Richard Braithwait",
         "date": "1613-01-01",
-        "id": "a0003"
+        "id": "a0003",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "莱布尼茨发明乘法器",
         "date": "1694-01-01",
-        "id": "a0004"
+        "id": "a0004",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "开始制造差分机；多项式",
         "date": "1823-01-01",
-        "id": "a0005"
+        "id": "a0005",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "差分机成功运作",
         "date": "1991-01-01",
-        "id": "a0006"
+        "id": "a0006",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "打孔卡片制表机发明",
         "date": "1880-01-01",
-        "id": "a0007"
+        "id": "a0007",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "Hollerith成立制表机器公司，后来的IBM",
         "date": "1924-01-01",
-        "id": "a0008"
+        "id": "a0008",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "harvard mark I 第一台大型计算机 由IBM制造",
         "date": "1994-01-01",
-        "id": "a0009"
+        "id": "a0009",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "哈佛马克2发现bug bug词来源",
         "date": "1947-01-01",
-        "id": "a0010"
+        "id": "a0010",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "真空管发明",
         "date": "1904-01-01",
-        "id": "a0011"
+        "id": "a0011",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "在二极管中加入控制电极",
         "date": "1906-01-01",
-        "id": "a0012"
+        "id": "a0012",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "colossus mark I 完工 使用真空管",
         "date": "1943-01-01",
-        "id": "a0013"
+        "id": "a0013",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "图灵制作Bombe破译纳粹密码",
         "date": "1941-01-01",
-        "id": "a0014"
+        "id": "a0014",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "ENIAC 宾夕法尼亚大学 第一个通用可编程电子计算机",
         "date": "1946-01-01",
-        "id": "a0015"
+        "id": "a0015",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "贝尔实验室发明晶体管 使用半导体",
         "date": "1947-01-01",
-        "id": "a0016"
+        "id": "a0016",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "IBM 利用晶体管 发行IBM608 半导体依赖硅 很多企业就搬到了硅谷",
         "date": "1957-01-01",
-        "id": "a0017"
+        "id": "a0017",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "逻辑的数学分析 布尔值",
         "date": "1847-01-01",
-        "id": "a0018"
+        "id": "a0018",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "ASCILL码表发明 存7位bit 128值 8位里剩下的给各国自定义",
         "date": "1963-01-01",
-        "id": "a0019"
+        "id": "a0019",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "Unicode发明 解决各国编码问题 16位方案超一百万位置",
         "date": "1992-01-01",
-        "id": "a0020"
+        "id": "a0020",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "英特尔74181 ALU发布",
         "date": "1970-01-01",
-        "id": "a0021"
+        "id": "a0021",
+        "tags": [
+            "tech"
+        ]
     },
     {
         "content": "Itel 4004处理器 所有指令单一芯片",
         "date": "1971-01-01",
-        "id": "a0022"
+        "id": "a0022",
+        "tags": [
+            "tech"
+        ]
+    },
+    {
+        "content": "first programmable textile",
+        "date": "1801-01-01",
+        "id": "a0023",
+        "tags": [
+            "tech"
+        ]
+    },
+    {
+        "content": "BABY elctronic memory store a programm in computer's memory: von Neumann architecture",
+        "date": "1948-01-01",
+        "id": "a0024",
+        "tags": [
+            "tech"
+        ]
+    },
+    {
+        "content": "punch cards loading to computer's memory",
+        "date": "1980-01-01",
+        "id": "a0025",
+        "tags": [
+            "tech"
+        ]
+    },
+    {
+        "content": "panel programming Altair 8800 1975",
+        "date": "1980-01-01",
+        "id": "a0026",
+        "tags": [
+            "tech"
+        ]
+    },
+    {
+        "content": "Marx died. 11 people attended his funeral.",
+        "date": "1883-01-01",
+        "id": "a0027",
+        "tags": [
+            "tech"
+        ]
+    },
+    {
+        "content": "test tags",
+        "date": "2024-01-20",
+        "id": "a0028",
+        "tags": [
+            "tags1",
+            "tags2"
+        ]
+    },
+    {
+        "content": "test tech tags",
+        "date": "2024-01-20",
+        "id": "a0029",
+        "tags": [
+            "tech",
+            "tags1"
+        ]
     }
 ]

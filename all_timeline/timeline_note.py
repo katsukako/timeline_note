@@ -7,10 +7,11 @@ import os
 
 class Note:
     """笔记类，用于存储单个笔记的内容、时间和ID。"""
-    def __init__(self, content, date, note_id):
+    def __init__(self, content, date,note_id, tags):
         self.content = content
         self.date = date
         self.id = note_id
+        self.tags = tags
 
 class NoteManager:
     """笔记管理类，用于处理添加、保存、展示和搜索笔记。"""
@@ -21,10 +22,10 @@ class NoteManager:
         self.current_id_index = 0
         self.load_notes()
 
-    def add_note(self, content, date):
+    def add_note(self, content, date, tags):
         """添加笔记"""
         note_id = self.generate_id()
-        note = Note(content, date, note_id)
+        note = Note(content, date, note_id, tags)
         self.notes.append(note)
         self.new_notes.append(note)  # 将新笔记添加到新笔记列表
         return note_id
@@ -63,7 +64,9 @@ class NoteManager:
             with open(self.file_path, "r", encoding="utf-8") as file:
                 notes_data = json.load(file)
                 for note_data in notes_data:
-                    note = Note(note_data["content"], note_data["date"], note_data["id"])
+                    # 检查每个笔记数据是否包含tags
+                    tags = note_data.get("tags", [])  # 如果不存在tags，则默认为空
+                    note = Note(note_data["content"], note_data["date"], note_data["id"], tags)
                     self.notes.append(note)
                     # 更新ID计数器以保证ID的唯一性
                     self.current_id_index = max(self.current_id_index, int(note.id[1:]) + 1)
@@ -75,14 +78,14 @@ class NoteManager:
         for i, note in enumerate(sorted_notes):
             if i % 20 == 0 and i != 0:
                 input("按任意键继续...")
-            print(f"ID: {note.id} | 日期: {note.date} | 内容: {note.content}\n")
+            print(f"ID: {note.id} | 日期: {note.date} | 内容: {note.content} | 标签: {note.tags}\n")
 
     def search_notes(self, keyword):
         """根据关键词搜索笔记"""
         matching_notes = [note for note in self.notes if keyword in note.content]
         if matching_notes:
             for note in matching_notes:
-                print(f"ID: {note.id} | 日期: {note.date} | 内容: {note.content}\n")
+                print(f"ID: {note.id} | 日期: {note.date} | 内容: {note.content} | 标签: {note.tags}\n")
         else:
             print("不存在匹配的笔记。")
     
@@ -90,7 +93,7 @@ class NoteManager:
         """跳转到特定ID的笔记"""
         found_note = next((note for note in self.notes if note.id == note_id), None)
         if found_note:
-            print(f"ID: {found_note.id} | 日期: {found_note.date} | 内容: {found_note.content}\n")
+            print(f"ID: {found_note.id} | 日期: {found_note.date} | 内容: {found_note.content} | 标签: {found_note.tags}\n")
         else:
             print("未找到指定ID的笔记。")
 
@@ -111,11 +114,13 @@ def main():
         if command == "I":
             # 添加笔记的逻辑
             date = input("请输入日期 (YYYY-MM-DD)：")
-            content = input("请输入笔记内容：")
             while not is_valid_date(date):
                 print("日期格式错误，请重新输入。")
                 date = input("请输入日期 (YYYY-MM-DD)：")
-            note_id = note_manager.add_note(content, date)
+            content = input("请输入笔记内容：")
+            tags_input = input("请输入标签（用逗号分隔）：")
+            tags = tags_input.split(',')  # 将输入的标签字符串分割为列表           
+            note_id = note_manager.add_note(content, date, tags)
             print(f"笔记已添加，ID为：{note_id}")
             note_manager.save_notes()
             print("笔记已保存。")
